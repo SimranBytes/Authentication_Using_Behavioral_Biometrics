@@ -1,0 +1,1 @@
+ D:\\Source\ Codes\\Apps\\biometrics\\.dart_tool\\flutter_build\\039172384c6bc01e19bebcae61d28521\\native_assets.yaml: 
