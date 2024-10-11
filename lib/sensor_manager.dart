@@ -14,6 +14,14 @@ class SensorManager {
   List<Offset> _touchStrokeData = [];
   StreamController<List<dynamic>> _dataController = StreamController.broadcast();
 
+  double? _accelerometerX, _accelerometerY, _accelerometerZ;
+  double? _gyroscopeX, _gyroscopeY, _gyroscopeZ;
+  double? _magnetometerX, _magnetometerY, _magnetometerZ;
+  double? _rotationVectorX, _rotationVectorY, _rotationVectorZ;
+  double? _tiltX, _tiltY, _tiltZ;
+  double? _autoRotationX, _autoRotationY, _autoRotationZ;
+  double? _motionX, _motionY, _motionZ;
+
   Stream<List<dynamic>> get dataStream => _dataController.stream;
 
   Future<void> startCollection(BuildContext context) async {
@@ -45,55 +53,76 @@ class SensorManager {
   void _collectSensorData() {
     // Accelerometer
     _streamSubscriptions.add(accelerometerEvents.listen((event) {
-      _addSensorEvent('Accelerometer', event.x, event.y, event.z);
+      _accelerometerX = event.x;
+      _accelerometerY = event.y;
+      _accelerometerZ = event.z;
+      _addSensorData();
     }));
 
     // Gyroscope
     _streamSubscriptions.add(gyroscopeEvents.listen((event) {
-      _addSensorEvent('Gyroscope', event.x, event.y, event.z);
+      _gyroscopeX = event.x;
+      _gyroscopeY = event.y;
+      _gyroscopeZ = event.z;
+      _addSensorData();
     }));
 
     // Magnetometer
     _streamSubscriptions.add(magnetometerEvents.listen((event) {
-      _addSensorEvent('Magnetometer', event.x, event.y, event.z);
+      _magnetometerX = event.x;
+      _magnetometerY = event.y;
+      _magnetometerZ = event.z;
+      _addSensorData();
     }));
 
     // Rotation Vector (Non-wakeup)
     _streamSubscriptions.add(userAccelerometerEvents.listen((event) {
-      _addSensorEvent('Rotation Vector Non-wakeup', event.x, event.y, event.z);
+      _rotationVectorX = event.x;
+      _rotationVectorY = event.y;
+      _rotationVectorZ = event.z;
+      _addSensorData();
     }));
 
     // Tilt Detector Wakeup
     _streamSubscriptions.add(gyroscopeEvents.listen((event) {
-      _addSensorEvent('Tilt Detector Wakeup', event.x, event.y, event.z);
+      _tiltX = event.x;
+      _tiltY = event.y;
+      _tiltZ = event.z;
+      _addSensorData();
     }));
 
     // Auto-rotation screen orientation sensor (Non-wakeup)
     _streamSubscriptions.add(userAccelerometerEvents.listen((event) {
-      _addSensorEvent('Auto-rotation Non-wakeup', event.x, event.y, event.z);
+      _autoRotationX = event.x;
+      _autoRotationY = event.y;
+      _autoRotationZ = event.z;
+      _addSensorData();
     }));
 
     // Motion Sensor
     _streamSubscriptions.add(userAccelerometerEvents.listen((event) {
-      _addSensorEvent('Motion Sensor', event.x, event.y, event.z);
+      _motionX = event.x;
+      _motionY = event.y;
+      _motionZ = event.z;
+      _addSensorData();
     }));
   }
 
-  void _addSensorEvent(String sensorType, double x, double y, double z) {
-    double lastTouchX = _touchStrokeData.isNotEmpty ? _touchStrokeData.last.dx : 0.0;
-    double lastTouchY = _touchStrokeData.isNotEmpty ? _touchStrokeData.last.dy : 0.0;
+  void _addSensorData() {
     List<dynamic> sensorEvent = [
       DateTime.now().toIso8601String(),
-      sensorType,
-      x,
-      y,
-      z,
-      lastTouchX,
-      lastTouchY
+      _accelerometerX ?? 0, _accelerometerY ?? 0, _accelerometerZ ?? 0,
+      _gyroscopeX ?? 0, _gyroscopeY ?? 0, _gyroscopeZ ?? 0,
+      _magnetometerX ?? 0, _magnetometerY ?? 0, _magnetometerZ ?? 0,
+      _rotationVectorX ?? 0, _rotationVectorY ?? 0, _rotationVectorZ ?? 0,
+      _tiltX ?? 0, _tiltY ?? 0, _tiltZ ?? 0,
+      _autoRotationX ?? 0, _autoRotationY ?? 0, _autoRotationZ ?? 0,
+      _motionX ?? 0, _motionY ?? 0, _motionZ ?? 0
     ];
+
     _sensorData.add(sensorEvent);
     _dataController.add(sensorEvent); // Broadcast sensor data
-    print("Data added for $sensorType: $sensorEvent");
+    print("Data added for timestamp ${sensorEvent[0]}: $sensorEvent");
   }
 
   Future<void> saveDataToFile() async {
@@ -102,7 +131,16 @@ class SensorManager {
       final filePath = '${directory.path}/sensor_data.csv';
       final File file = File(filePath);
       final List<List<dynamic>> rows = List<List<dynamic>>.from(_sensorData);
-      rows.insert(0, ["Timestamp", "Sensor Type", "X", "Y", "Z", "Last Touch X", "Last Touch Y"]);
+      rows.insert(0, [
+        "Timestamp",
+        "Accelerometer X", "Accelerometer Y", "Accelerometer Z",
+        "Gyroscope X", "Gyroscope Y", "Gyroscope Z",
+        "Magnetometer X", "Magnetometer Y", "Magnetometer Z",
+        "Rotation Vector X", "Rotation Vector Y", "Rotation Vector Z",
+        "Tilt Detector X", "Tilt Detector Y", "Tilt Detector Z",
+        "Auto-rotation X", "Auto-rotation Y", "Auto-rotation Z",
+        "Motion X", "Motion Y", "Motion Z"
+      ]);
       String csvData = const ListToCsvConverter().convert(rows);
       await file.writeAsString(csvData);
       print('Data saved to $filePath');
