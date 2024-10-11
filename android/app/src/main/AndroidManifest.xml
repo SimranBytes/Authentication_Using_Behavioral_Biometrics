@@ -7,7 +7,7 @@
         tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
     <application
         android:label="biometrics"
         android:name="${applicationName}"
@@ -35,7 +35,6 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-
         <service android:name=".MyBackgroundService"
             android:enabled="true"
             android:exported="true"/>

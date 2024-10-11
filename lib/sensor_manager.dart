@@ -6,7 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:csv/csv.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:cross_file/cross_file.dart';
-import 'permissions.dart'; // Import the permissions file
+import 'permissions.dart';
 
 class SensorManager {
   List<StreamSubscription<dynamic>> _streamSubscriptions = [];

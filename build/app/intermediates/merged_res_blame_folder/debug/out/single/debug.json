@@ -4,6 +4,10 @@
         "source": "com.example.biometrics.app-main-26:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "com.example.biometrics.app-merged_res-32:/drawable_background_icon.png.flat",
+        "source": "com.example.biometrics.app-main-26:/drawable/background_icon.png"
+    },
+    {
         "merged": "com.example.biometrics.app-merged_res-32:/drawable-v21_launch_background.xml.flat",
         "source": "com.example.biometrics.app-main-26:/drawable-v21/launch_background.xml"
     },

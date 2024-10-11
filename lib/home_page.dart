@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart'; // Add this import for MethodChannel
 import 'sensor_manager.dart';
-
 
 class CsvDataScreen extends StatefulWidget {
   @override
@@ -25,9 +25,9 @@ class _CsvDataScreenState extends State<CsvDataScreen> {
             return Center(child: Text("Error: ${snapshot.error}"));
           } else if (snapshot.hasData) {
             return ListView.builder(
-              itemCount: snapshot.data!.length,  // Asserting that snapshot.data is not null
+              itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
-                List<dynamic> row = snapshot.data![index];  // Safe to use ! since we check above
+                List<dynamic> row = snapshot.data![index];
                 return ListTile(
                   title: Text('Timestamp: ${row[0]}'),
                   subtitle: Text('Accelerometer: (${row[1]}, ${row[2]}, ${row[3]}) Touch: (${row[4]}, ${row[5]})'),
@@ -52,12 +52,16 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _isCollectingData = false;
   SensorManager sensorManager = SensorManager();
 
+  // Define MethodChannel as a static constant
+  static const MethodChannel platform = MethodChannel('com.example.yourapp/background');
+
   @override
   void dispose() {
     sensorManager.dispose();
     super.dispose();
   }
 
+  // This method toggles data collection and starts/stops the foreground service
   void _toggleDataCollection() async {
     setState(() {
       _isCollectingData = !_isCollectingData;
@@ -66,12 +70,14 @@ class _MyHomePageState extends State<MyHomePage> {
     if (_isCollectingData) {
       try {
         await sensorManager.startCollection(context);
+        // Start the foreground service when data collection begins
+        await _startForegroundService();
         ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text("Data collection started successfully."))
         );
       } catch (e) {
         setState(() {
-          _isCollectingData = false; // Reset flag if starting collection fails
+          _isCollectingData = false;
         });
         _showErrorDialog(e.toString());
       }
@@ -83,6 +89,16 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  // Method to handle starting the foreground service
+  Future<void> _startForegroundService() async {
+    try {
+      await platform.invokeMethod('startService'); // Call to the native Android service
+    } on PlatformException catch (e) {
+      print("Failed to start service: '${e.message}'.");
+    }
+  }
+
+  // Error dialog in case of failure
   void _showErrorDialog(String message) {
     showDialog(
       context: context,
@@ -119,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text(_isCollectingData ? 'Stop Data Collection' : 'Start Data Collection'),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                      _isCollectingData ? Colors.red : Colors.green
+                    _isCollectingData ? Colors.red : Colors.green,
                   ),
                 ),
               ),
@@ -127,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => CsvDataScreen())
+                    MaterialPageRoute(builder: (context) => CsvDataScreen()),
                   );
                 },
                 child: Text('Show Sensor Data'),
