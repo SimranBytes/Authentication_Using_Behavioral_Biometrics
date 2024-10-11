@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'home_page.dart';
 
 void main() {
@@ -6,6 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  // static var platform = MethodChannel('com.example.biometrics/background');
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

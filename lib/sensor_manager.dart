@@ -43,21 +43,57 @@ class SensorManager {
   }
 
   void _collectSensorData() {
+    // Accelerometer
     _streamSubscriptions.add(accelerometerEvents.listen((event) {
-      double lastTouchX = _touchStrokeData.isNotEmpty ? _touchStrokeData.last.dx : 0.0;
-      double lastTouchY = _touchStrokeData.isNotEmpty ? _touchStrokeData.last.dy : 0.0;
-      List<dynamic> sensorEvent = [
-        DateTime.now().toIso8601String(),
-        event.x,
-        event.y,
-        event.z,
-        lastTouchX,
-        lastTouchY
-      ];
-      _sensorData.add(sensorEvent);
-      _dataController.add(sensorEvent); // Broadcast sensor data
-      print("Data added: $sensorEvent");
+      _addSensorEvent('Accelerometer', event.x, event.y, event.z);
     }));
+
+    // Gyroscope
+    _streamSubscriptions.add(gyroscopeEvents.listen((event) {
+      _addSensorEvent('Gyroscope', event.x, event.y, event.z);
+    }));
+
+    // Magnetometer
+    _streamSubscriptions.add(magnetometerEvents.listen((event) {
+      _addSensorEvent('Magnetometer', event.x, event.y, event.z);
+    }));
+
+    // Rotation Vector (Non-wakeup)
+    _streamSubscriptions.add(userAccelerometerEvents.listen((event) {
+      _addSensorEvent('Rotation Vector Non-wakeup', event.x, event.y, event.z);
+    }));
+
+    // Tilt Detector Wakeup
+    _streamSubscriptions.add(gyroscopeEvents.listen((event) {
+      _addSensorEvent('Tilt Detector Wakeup', event.x, event.y, event.z);
+    }));
+
+    // Auto-rotation screen orientation sensor (Non-wakeup)
+    _streamSubscriptions.add(userAccelerometerEvents.listen((event) {
+      _addSensorEvent('Auto-rotation Non-wakeup', event.x, event.y, event.z);
+    }));
+
+    // Motion Sensor
+    _streamSubscriptions.add(userAccelerometerEvents.listen((event) {
+      _addSensorEvent('Motion Sensor', event.x, event.y, event.z);
+    }));
+  }
+
+  void _addSensorEvent(String sensorType, double x, double y, double z) {
+    double lastTouchX = _touchStrokeData.isNotEmpty ? _touchStrokeData.last.dx : 0.0;
+    double lastTouchY = _touchStrokeData.isNotEmpty ? _touchStrokeData.last.dy : 0.0;
+    List<dynamic> sensorEvent = [
+      DateTime.now().toIso8601String(),
+      sensorType,
+      x,
+      y,
+      z,
+      lastTouchX,
+      lastTouchY
+    ];
+    _sensorData.add(sensorEvent);
+    _dataController.add(sensorEvent); // Broadcast sensor data
+    print("Data added for $sensorType: $sensorEvent");
   }
 
   Future<void> saveDataToFile() async {
@@ -66,7 +102,7 @@ class SensorManager {
       final filePath = '${directory.path}/sensor_data.csv';
       final File file = File(filePath);
       final List<List<dynamic>> rows = List<List<dynamic>>.from(_sensorData);
-      rows.insert(0, ["Timestamp", "Accelerometer X", "Accelerometer Y", "Accelerometer Z", "Last Touch X", "Last Touch Y"]);
+      rows.insert(0, ["Timestamp", "Sensor Type", "X", "Y", "Z", "Last Touch X", "Last Touch Y"]);
       String csvData = const ListToCsvConverter().convert(rows);
       await file.writeAsString(csvData);
       print('Data saved to $filePath');

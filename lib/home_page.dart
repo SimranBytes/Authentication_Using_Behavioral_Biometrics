@@ -52,8 +52,8 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _isCollectingData = false;
   SensorManager sensorManager = SensorManager();
 
-  // Define MethodChannel as a static constant
-  static const MethodChannel platform = MethodChannel('com.example.yourapp/background');
+  // Define the MethodChannel to communicate with Android
+  static const MethodChannel platform = MethodChannel('com.example.biometrics/background');
 
   @override
   void dispose() {
@@ -61,7 +61,15 @@ class _MyHomePageState extends State<MyHomePage> {
     super.dispose();
   }
 
-  // This method toggles data collection and starts/stops the foreground service
+  // Method to start the background service
+  Future<void> _startForegroundService() async {
+    try {
+      await platform.invokeMethod('startService');  // Trigger the Android service
+    } on PlatformException catch (e) {
+      print("Failed to start service: '${e.message}'.");
+    }
+  }
+
   void _toggleDataCollection() async {
     setState(() {
       _isCollectingData = !_isCollectingData;
@@ -70,8 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (_isCollectingData) {
       try {
         await sensorManager.startCollection(context);
-        // Start the foreground service when data collection begins
-        await _startForegroundService();
+        await _startForegroundService();  // Start the foreground service when data collection starts
         ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text("Data collection started successfully."))
         );
@@ -89,16 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  // Method to handle starting the foreground service
-  Future<void> _startForegroundService() async {
-    try {
-      await platform.invokeMethod('startService'); // Call to the native Android service
-    } on PlatformException catch (e) {
-      print("Failed to start service: '${e.message}'.");
-    }
-  }
-
-  // Error dialog in case of failure
   void _showErrorDialog(String message) {
     showDialog(
       context: context,
