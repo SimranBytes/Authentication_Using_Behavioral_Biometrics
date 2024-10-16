@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.biometrics.app-mergeDebugResources-30:/values-v24/values-v24.xml",
+            "outputFile": "com.example.biometrics.app-mergeDebugResources-35:/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "C:\\Users\\akshi\\.gradle\\caches\\transforms-3\\006b6d331965c0a654be2effa174fe4e\\transformed\\media-1.1.0\\res\\values-v24\\values-v24.xml",

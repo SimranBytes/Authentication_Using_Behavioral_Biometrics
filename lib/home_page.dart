@@ -80,8 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
         await sensorManager.startCollection(context);
         await _startForegroundService();  // Start the foreground service when data collection starts
         ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("Data collection started successfully."))
-        );
+            SnackBar(content: Text("Data collection started successfully.")));
       } catch (e) {
         setState(() {
           _isCollectingData = false;
@@ -91,8 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
     } else {
       sensorManager.stopCollection();
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Data collection stopped."))
-      );
+          SnackBar(content: Text("Data collection stopped.")));
     }
   }
 

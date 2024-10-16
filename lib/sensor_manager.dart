@@ -6,6 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:csv/csv.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:cross_file/cross_file.dart';
+import 'package:workmanager/workmanager.dart';
 import 'permissions.dart';
 
 class SensorManager {
@@ -21,14 +22,17 @@ class SensorManager {
   double? _tiltX, _tiltY, _tiltZ;
   double? _autoRotationX, _autoRotationY, _autoRotationZ;
   double? _motionX, _motionY, _motionZ;
-  double? _lastTouchX, _lastTouchY; // Added variables to store last touch position
+
+  // Variables for storing touch data
+  double? _lastTouchX, _lastTouchY;
+  double? _currentTouchX, _currentTouchY;
 
   Stream<List<dynamic>> get dataStream => _dataController.stream;
 
   Future<void> startCollection(BuildContext context) async {
-    //bool granted = await requestStoragePermission(); // Call the function from permissions.dart
     if (true) {
       _collectSensorData();
+      _startBackgroundTask(); // Start background collection task
       print('Data collection started.');
     } else {
       print("Storage permission not granted");
@@ -41,20 +45,24 @@ class SensorManager {
     _dataController.close();
   }
 
+  // Function to update touch data in real-time
   void updateTouchData(Offset touchPosition) {
     _touchStrokeData.add(touchPosition);
-    _lastTouchX = touchPosition.dx; // Store last touch X
-    _lastTouchY = touchPosition.dy; // Store last touch Y
+    _lastTouchX = _currentTouchX ?? 0; // Store last touch
+    _lastTouchY = _currentTouchY ?? 0;
+
+    _currentTouchX = touchPosition.dx; // Store current touch X
+    _currentTouchY = touchPosition.dy; // Store current touch Y
+
     _dataController.add([
       DateTime.now().toIso8601String(),
-      'Touch',
-      touchPosition.dx,
-      touchPosition.dy
+      'CurrentTouch',
+      _currentTouchX,
+      _currentTouchY
     ]);
   }
 
   void _collectSensorData() {
-    // Accelerometer
     _streamSubscriptions.add(accelerometerEvents.listen((event) {
       _accelerometerX = event.x;
       _accelerometerY = event.y;
@@ -62,7 +70,6 @@ class SensorManager {
       _addSensorData();
     }));
 
-    // Gyroscope
     _streamSubscriptions.add(gyroscopeEvents.listen((event) {
       _gyroscopeX = event.x;
       _gyroscopeY = event.y;
@@ -70,43 +77,10 @@ class SensorManager {
       _addSensorData();
     }));
 
-    // Magnetometer
     _streamSubscriptions.add(magnetometerEvents.listen((event) {
       _magnetometerX = event.x;
       _magnetometerY = event.y;
       _magnetometerZ = event.z;
-      _addSensorData();
-    }));
-
-    // Rotation Vector (Non-wakeup)
-    _streamSubscriptions.add(userAccelerometerEvents.listen((event) {
-      _rotationVectorX = event.x;
-      _rotationVectorY = event.y;
-      _rotationVectorZ = event.z;
-      _addSensorData();
-    }));
-
-    // Tilt Detector Wakeup
-    _streamSubscriptions.add(gyroscopeEvents.listen((event) {
-      _tiltX = event.x;
-      _tiltY = event.y;
-      _tiltZ = event.z;
-      _addSensorData();
-    }));
-
-    // Auto-rotation screen orientation sensor (Non-wakeup)
-    _streamSubscriptions.add(userAccelerometerEvents.listen((event) {
-      _autoRotationX = event.x;
-      _autoRotationY = event.y;
-      _autoRotationZ = event.z;
-      _addSensorData();
-    }));
-
-    // Motion Sensor
-    _streamSubscriptions.add(userAccelerometerEvents.listen((event) {
-      _motionX = event.x;
-      _motionY = event.y;
-      _motionZ = event.z;
       _addSensorData();
     }));
   }
@@ -117,15 +91,12 @@ class SensorManager {
       _accelerometerX ?? 0, _accelerometerY ?? 0, _accelerometerZ ?? 0,
       _gyroscopeX ?? 0, _gyroscopeY ?? 0, _gyroscopeZ ?? 0,
       _magnetometerX ?? 0, _magnetometerY ?? 0, _magnetometerZ ?? 0,
-      _rotationVectorX ?? 0, _rotationVectorY ?? 0, _rotationVectorZ ?? 0,
-      _tiltX ?? 0, _tiltY ?? 0, _tiltZ ?? 0,
-      _autoRotationX ?? 0, _autoRotationY ?? 0, _autoRotationZ ?? 0,
-      _motionX ?? 0, _motionY ?? 0, _motionZ ?? 0,
-      _lastTouchX ?? 0, _lastTouchY ?? 0  // Include last touch data
+      _lastTouchX ?? 0, _lastTouchY ?? 0, // Last touch data
+      _currentTouchX ?? 0, _currentTouchY ?? 0  // Current touch data
     ];
 
     _sensorData.add(sensorEvent);
-    _dataController.add(sensorEvent); // Broadcast sensor data
+    _dataController.add(sensorEvent);
     print("Data added for timestamp ${sensorEvent[0]}: $sensorEvent");
   }
 
@@ -135,17 +106,16 @@ class SensorManager {
       final filePath = '${directory.path}/sensor_data.csv';
       final File file = File(filePath);
       final List<List<dynamic>> rows = List<List<dynamic>>.from(_sensorData);
+
       rows.insert(0, [
         "Timestamp",
         "Accelerometer X", "Accelerometer Y", "Accelerometer Z",
         "Gyroscope X", "Gyroscope Y", "Gyroscope Z",
         "Magnetometer X", "Magnetometer Y", "Magnetometer Z",
-        "Rotation Vector X", "Rotation Vector Y", "Rotation Vector Z",
-        "Tilt Detector X", "Tilt Detector Y", "Tilt Detector Z",
-        "Auto-rotation X", "Auto-rotation Y", "Auto-rotation Z",
-        "Motion X", "Motion Y", "Motion Z",
-        "Last Touch X", "Last Touch Y"  // Add headers for touch data
+        "Last Touch X", "Last Touch Y",
+        "Current Touch X", "Current Touch Y"
       ]);
+
       String csvData = const ListToCsvConverter().convert(rows);
       await file.writeAsString(csvData);
       print('Data saved to $filePath');
@@ -165,8 +135,9 @@ class SensorManager {
     if (directory != null) {
       final filePath = '${directory.path}/sensor_data.csv';
       final File file = File(filePath);
+
       if (await file.exists()) {
-        final XFile xFile = XFile(filePath); // Create an XFile for sharing
+        final XFile xFile = XFile(filePath);
         await Share.shareXFiles([xFile], text: 'Here is the sensor data collected.');
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -180,6 +151,14 @@ class SensorManager {
     }
   }
 
+  Future<void> _startBackgroundTask() async {
+    Workmanager().registerPeriodicTask(
+      "sensorDataCollection",
+      "backgroundSensorTask",
+      frequency: const Duration(minutes: 15),
+    );
+  }
+
   Future<List<List<dynamic>>> readCsvData() async {
     try {
       final directory = await getExternalStorageDirectory();
@@ -188,8 +167,7 @@ class SensorManager {
 
       if (await file.exists()) {
         final csvString = await file.readAsString();
-        List<List<dynamic>> csvData = const CsvToListConverter().convert(csvString);
-        return csvData;
+        return const CsvToListConverter().convert(csvString);
       } else {
         throw Exception("CSV file does not exist.");
       }
@@ -199,4 +177,3 @@ class SensorManager {
     }
   }
 }
-

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.biometrics.app-mergeDebugResources-30:/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "com.example.biometrics.app-mergeDebugResources-35:/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "C:\\Users\\akshi\\.gradle\\caches\\transforms-3\\853727013b9b6549d00f29b3fefaeb27\\transformed\\appcompat-1.6.1\\res\\values-en-rGB\\values-en-rGB.xml",
