@@ -114,6 +114,15 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  // Method to handle sharing the CSV file
+  Future<void> _shareCsvFile() async {
+    try {
+      await sensorManager.shareDataFile(context);  // Share the CSV file
+    } catch (e) {
+      _showErrorDialog("Failed to share the CSV file: ${e.toString()}");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -144,6 +153,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: Text('Show Sensor Data'),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: _shareCsvFile,  // Call the share function when button is pressed
+                child: Text('Share CSV Data'),
               ),
             ],
           ),

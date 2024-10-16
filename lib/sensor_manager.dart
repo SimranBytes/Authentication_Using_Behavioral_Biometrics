@@ -21,6 +21,7 @@ class SensorManager {
   double? _tiltX, _tiltY, _tiltZ;
   double? _autoRotationX, _autoRotationY, _autoRotationZ;
   double? _motionX, _motionY, _motionZ;
+  double? _lastTouchX, _lastTouchY; // Added variables to store last touch position
 
   Stream<List<dynamic>> get dataStream => _dataController.stream;
 
@@ -42,6 +43,8 @@ class SensorManager {
 
   void updateTouchData(Offset touchPosition) {
     _touchStrokeData.add(touchPosition);
+    _lastTouchX = touchPosition.dx; // Store last touch X
+    _lastTouchY = touchPosition.dy; // Store last touch Y
     _dataController.add([
       DateTime.now().toIso8601String(),
       'Touch',
@@ -117,7 +120,8 @@ class SensorManager {
       _rotationVectorX ?? 0, _rotationVectorY ?? 0, _rotationVectorZ ?? 0,
       _tiltX ?? 0, _tiltY ?? 0, _tiltZ ?? 0,
       _autoRotationX ?? 0, _autoRotationY ?? 0, _autoRotationZ ?? 0,
-      _motionX ?? 0, _motionY ?? 0, _motionZ ?? 0
+      _motionX ?? 0, _motionY ?? 0, _motionZ ?? 0,
+      _lastTouchX ?? 0, _lastTouchY ?? 0  // Include last touch data
     ];
 
     _sensorData.add(sensorEvent);
@@ -139,7 +143,8 @@ class SensorManager {
         "Rotation Vector X", "Rotation Vector Y", "Rotation Vector Z",
         "Tilt Detector X", "Tilt Detector Y", "Tilt Detector Z",
         "Auto-rotation X", "Auto-rotation Y", "Auto-rotation Z",
-        "Motion X", "Motion Y", "Motion Z"
+        "Motion X", "Motion Y", "Motion Z",
+        "Last Touch X", "Last Touch Y"  // Add headers for touch data
       ]);
       String csvData = const ListToCsvConverter().convert(rows);
       await file.writeAsString(csvData);
@@ -194,3 +199,4 @@ class SensorManager {
     }
   }
 }
+
