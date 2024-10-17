@@ -1,62 +1,64 @@
 package com.example.biometrics;
 
-import android.app.Service;
-import android.content.Intent;
-import android.os.IBinder;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
 import android.os.Build;
 import android.util.Log;
+import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
+import io.flutter.plugin.common.MethodChannel;
 
 public class MyBackgroundService extends Service {
 
-    private static final String CHANNEL_ID = "background_service_channel";
+    private static final String CHANNEL_ID = "ForegroundServiceChannel";
+    private static final String TAG = "MyBackgroundService";
 
+    @Nullable
     @Override
-    public void onCreate() {
-        super.onCreate();
-
-        // Create the notification channel if the Android version is O or higher
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(
-                    CHANNEL_ID,
-                    "Background Service",
-                    NotificationManager.IMPORTANCE_LOW
-            );
-            NotificationManager manager = getSystemService(NotificationManager.class);
-            if (manager != null) {
-                manager.createNotificationChannel(channel);
-            }
-        }
-
-        // Create the notification
-        Notification notification = new Notification.Builder(this, CHANNEL_ID)
-                .setContentTitle("App Running")
-                .setContentText("App is running in the background")
-                .setSmallIcon(R.mipmap.ic_launcher)  // You can use your app's icon here
-                .setPriority(Notification.PRIORITY_LOW)  // Low priority for background service notifications
-                .build();
-
-        // Start the service in the foreground with the notification
-        startForeground(1, notification);
+    public IBinder onBind(Intent intent) {
+        // We won't use binding in this case
+        return null;
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d("MyBackgroundService", "Service started");
-        // Keep the service running
-        return START_STICKY;
-    }
+        Log.d(TAG, "Service started");
+        createNotificationChannel();
 
-    @Override
-    public IBinder onBind(Intent intent) {
-        return null;  // No binding is needed for this service
+        // Create a notification to run the service as a foreground service
+        Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .setContentTitle("Sensor Data Collection")
+                .setContentText("Collecting gestures and sensor data in the background")
+                .setSmallIcon(android.R.drawable.ic_menu_mylocation)
+                .build();
+
+        // Start the foreground service with the notification
+        startForeground(1, notification);
+
+        // Run some task if necessary, or invoke platform channels to communicate with Flutter
+        return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d("MyBackgroundService", "Service stopped");
+        Log.d(TAG, "Service destroyed");
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel serviceChannel = new NotificationChannel(
+                    CHANNEL_ID,
+                    "Foreground Service Channel",
+                    NotificationManager.IMPORTANCE_DEFAULT
+            );
+
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(serviceChannel);
+        }
     }
 }

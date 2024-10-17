@@ -31,462 +31,480 @@
 21    <uses-permission android:name="android.permission.WAKE_LOCK" />
 21-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:11:5-68
 21-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:11:22-65
-22    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" /> <!-- Add the required permission for dataSync foreground service type -->
+22    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 22-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:12:5-94
 22-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:12:22-92
-23    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" /> <!-- Queries (used for intent resolution) -->
-23-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:14:5-86
-23-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:14:22-84
-24    <queries>
-24-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:57:5-62:15
-25        <intent>
-25-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:58:9-61:18
-26            <action android:name="android.intent.action.PROCESS_TEXT" />
-26-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:59:13-72
-26-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:59:21-70
-27
-28            <data android:mimeType="text/plain" />
-28-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:60:13-50
-28-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:60:19-48
-29        </intent>
-30    </queries>
-31
-32    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-32-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-81
-32-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-78
-33    <uses-permission android:name="android.permission.VIBRATE" />
-33-->[:flutter_local_notifications] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-66
-33-->[:flutter_local_notifications] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-63
-34    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-34-->[:flutter_local_notifications] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-77
-34-->[:flutter_local_notifications] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-74
-35    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-35-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:24:5-79
-35-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:24:22-76
-36
-37    <permission
-37-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
-38        android:name="com.example.biometrics.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-38-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
-39        android:protectionLevel="signature" />
-39-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
-40
-41    <uses-permission android:name="com.example.biometrics.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-41-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
-41-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+23    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+23-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:13:5-85
+23-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:13:22-82
+24    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- Add the required permission for dataSync foreground service type -->
+24-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:14:5-78
+24-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:14:22-75
+25    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" /> <!-- Queries (used for intent resolution) -->
+25-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:17:5-86
+25-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:17:22-84
+26    <queries>
+26-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:74:5-79:15
+27        <intent>
+27-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:75:9-78:18
+28            <action android:name="android.intent.action.PROCESS_TEXT" />
+28-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:76:13-72
+28-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:76:21-70
+29
+30            <data android:mimeType="text/plain" />
+30-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:77:13-50
+30-->D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\android\app\src\main\AndroidManifest.xml:77:19-48
+31        </intent>
+32    </queries>
+33
+34    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+34-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-81
+34-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-78
+35    <uses-permission android:name="android.permission.VIBRATE" />
+35-->[:flutter_local_notifications] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-66
+35-->[:flutter_local_notifications] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-63
+36    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+36-->[:flutter_local_notifications] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-77
+36-->[:flutter_local_notifications] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-74
+37    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+37-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:24:5-79
+37-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:24:22-76
+38
+39    <permission
+39-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+40        android:name="com.example.biometrics.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+40-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+41        android:protectionLevel="signature" />
+41-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
 42
-43    <application
-44        android:name="android.app.Application"
-45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-45-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
-46        android:debuggable="true"
-47        android:enableOnBackInvokedCallback="true"
-48        android:icon="@mipmap/ic_launcher"
-49        android:label="biometrics"
-50        android:requestLegacyExternalStorage="true" >
-51
-52        <!-- MainActivity Declaration -->
-53        <activity
-54            android:name="com.example.biometrics.MainActivity"
-55            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-56            android:exported="true"
-57            android:hardwareAccelerated="true"
-58            android:launchMode="singleTop"
-59            android:theme="@style/LaunchTheme"
-60            android:windowSoftInputMode="adjustResize" >
-61            <meta-data
-62                android:name="io.flutter.embedding.android.NormalTheme"
-63                android:resource="@style/NormalTheme" />
-64
-65            <intent-filter>
-66                <action android:name="android.intent.action.MAIN" />
-67
-68                <category android:name="android.intent.category.LAUNCHER" />
-69            </intent-filter>
-70        </activity>
-71
-72        <!-- Flutter Embedding Version -->
-73        <meta-data
-74            android:name="flutterEmbedding"
-75            android:value="2" />
-76
-77        <!-- Background Service Declaration -->
-78        <service
-79            android:name="com.example.biometrics.MyBackgroundService"
-80            android:enabled="true"
-81            android:exported="false"
-82            android:foregroundServiceType="dataSync" /> <!-- Specify the foreground service type here -->
-83
-84        <service
-84-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:44
-85            android:name="id.flutter.flutter_background_service.BackgroundService"
-85-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-83
-86            android:enabled="true"
-86-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-35
-87            android:exported="true"
-87-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-36
-88            android:stopWithTask="false" />
-88-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-41
-89
-90        <receiver
-90-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-21:39
-91            android:name="id.flutter.flutter_background_service.WatchdogReceiver"
-91-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-82
-92            android:enabled="true"
-92-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-35
-93            android:exported="true" />
-93-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-36
-94        <receiver
-94-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-31:20
-95            android:name="id.flutter.flutter_background_service.BootReceiver"
-95-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-78
-96            android:enabled="true"
-96-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-35
-97            android:exported="true" >
-97-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-36
-98            <intent-filter>
-98-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-30:29
-99                <action android:name="android.intent.action.BOOT_COMPLETED" />
-99-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-79
-99-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-76
-100                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-100-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-82
-100-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:28:25-79
-101                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-101-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-84
-101-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:29:25-81
-102            </intent-filter>
-103        </receiver>
-104
-105        <provider
-105-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-16:20
-106            android:name="com.sidlatau.flutteremailsender.FlutterEmailSenderFileProvider"
-106-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-90
-107            android:authorities="com.example.biometrics.file_provider"
-107-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-65
-108            android:exported="false"
-108-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-37
-109            android:grantUriPermissions="true" >
-109-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-47
-110            <meta-data
-110-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-15:61
-111                android:name="android.support.FILE_PROVIDER_PATHS"
-111-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:14:17-67
-112                android:resource="@xml/shared_file_paths" />
-112-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:15:17-58
-113        </provider>
-114        <!--
-115           Declares a provider which allows us to store files to share in
-116           '.../caches/share_plus' and grant the receiving action access
-117        -->
-118        <provider
-118-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:13:9-21:20
-119            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
-119-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-77
-120            android:authorities="com.example.biometrics.flutter.share_provider"
-120-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-74
-121            android:exported="false"
-121-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
-122            android:grantUriPermissions="true" >
-122-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-47
-123            <meta-data
-123-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-15:61
-124                android:name="android.support.FILE_PROVIDER_PATHS"
-124-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:14:17-67
-125                android:resource="@xml/flutter_share_file_paths" />
-125-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:15:17-58
-126        </provider>
-127        <!--
-128           This manifest declared broadcast receiver allows us to use an explicit
-129           Intent when creating a PendingItent to be informed of the user's choice
-130        -->
-131        <receiver
-131-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:26:9-32:20
-132            android:name="dev.fluttercommunity.plus.share.SharePlusPendingIntent"
-132-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-82
-133            android:exported="false" >
-133-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-37
-134            <intent-filter>
-134-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-31:29
-135                <action android:name="EXTRA_CHOSEN_COMPONENT" />
-135-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:30:17-65
-135-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:30:25-62
-136            </intent-filter>
-137        </receiver>
-138
-139        <provider
-139-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:29:9-37:20
-140            android:name="androidx.startup.InitializationProvider"
-140-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:30:13-67
-141            android:authorities="com.example.biometrics.androidx-startup"
-141-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:31:13-68
-142            android:exported="false" >
-142-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:32:13-37
-143            <meta-data
-143-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:34:13-36:52
-144                android:name="androidx.work.WorkManagerInitializer"
-144-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:35:17-68
-145                android:value="androidx.startup" />
-145-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:36:17-49
-146            <meta-data
-146-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\6a9085f24c33e52c377a5cacb1db2e0e\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-147                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-147-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\6a9085f24c33e52c377a5cacb1db2e0e\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-148                android:value="androidx.startup" />
-148-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\6a9085f24c33e52c377a5cacb1db2e0e\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-149            <meta-data
-149-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\akshi\.gradle\caches\transforms-3\f477ad10a2923f78552261c5d440f766\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
-150                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-150-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\akshi\.gradle\caches\transforms-3\f477ad10a2923f78552261c5d440f766\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
-151                android:value="androidx.startup" />
-151-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\akshi\.gradle\caches\transforms-3\f477ad10a2923f78552261c5d440f766\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
-152            <meta-data
-152-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-153                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-153-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-154                android:value="androidx.startup" />
-154-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-155        </provider>
-156
-157        <service
-157-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:39:9-45:35
-158            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
-158-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:40:13-88
-159            android:directBootAware="false"
-159-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:41:13-44
-160            android:enabled="@bool/enable_system_alarm_service_default"
-160-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:42:13-72
-161            android:exported="false" />
-161-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:43:13-37
-162        <service
-162-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:46:9-52:35
-163            android:name="androidx.work.impl.background.systemjob.SystemJobService"
-163-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:47:13-84
-164            android:directBootAware="false"
-164-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:48:13-44
-165            android:enabled="@bool/enable_system_job_service_default"
-165-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:49:13-70
-166            android:exported="true"
-166-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:50:13-36
-167            android:permission="android.permission.BIND_JOB_SERVICE" />
-167-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:51:13-69
-168        <service
-168-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:53:9-59:35
-169            android:name="androidx.work.impl.foreground.SystemForegroundService"
-169-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:54:13-81
-170            android:directBootAware="false"
-170-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:55:13-44
-171            android:enabled="@bool/enable_system_foreground_service_default"
-171-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:56:13-77
-172            android:exported="false" />
-172-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:57:13-37
-173
-174        <receiver
-174-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:61:9-66:35
-175            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
-175-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:62:13-88
-176            android:directBootAware="false"
-176-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:63:13-44
-177            android:enabled="true"
-177-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:64:13-35
-178            android:exported="false" />
-178-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:65:13-37
-179        <receiver
-179-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:67:9-77:20
-180            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
-180-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:68:13-106
-181            android:directBootAware="false"
-181-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:69:13-44
-182            android:enabled="false"
-182-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:70:13-36
-183            android:exported="false" >
-183-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:71:13-37
-184            <intent-filter>
-184-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:73:13-76:29
-185                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-185-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:74:17-87
-185-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:74:25-84
-186                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-186-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:75:17-90
-186-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:75:25-87
-187            </intent-filter>
-188        </receiver>
-189        <receiver
-189-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:78:9-88:20
-190            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
-190-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:79:13-104
-191            android:directBootAware="false"
-191-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:80:13-44
-192            android:enabled="false"
-192-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:81:13-36
-193            android:exported="false" >
-193-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:82:13-37
-194            <intent-filter>
-194-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:84:13-87:29
-195                <action android:name="android.intent.action.BATTERY_OKAY" />
-195-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:85:17-77
-195-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:85:25-74
-196                <action android:name="android.intent.action.BATTERY_LOW" />
-196-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:86:17-76
-196-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:86:25-73
-197            </intent-filter>
-198        </receiver>
-199        <receiver
-199-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:89:9-99:20
-200            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
-200-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:90:13-104
-201            android:directBootAware="false"
-201-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:91:13-44
-202            android:enabled="false"
-202-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:92:13-36
-203            android:exported="false" >
-203-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:93:13-37
-204            <intent-filter>
-204-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:95:13-98:29
-205                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
-205-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:96:17-83
-205-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:96:25-80
-206                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
-206-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:97:17-82
-206-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:97:25-79
-207            </intent-filter>
-208        </receiver>
-209        <receiver
-209-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:100:9-109:20
-210            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
-210-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:101:13-103
-211            android:directBootAware="false"
-211-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:102:13-44
-212            android:enabled="false"
-212-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:103:13-36
-213            android:exported="false" >
-213-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:104:13-37
-214            <intent-filter>
-214-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:106:13-108:29
-215                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-215-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:107:17-79
-215-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:107:25-76
-216            </intent-filter>
-217        </receiver>
-218        <receiver
-218-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:110:9-121:20
-219            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-219-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:111:13-88
-220            android:directBootAware="false"
-220-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:112:13-44
-221            android:enabled="false"
-221-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:113:13-36
-222            android:exported="false" >
-222-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:114:13-37
-223            <intent-filter>
-223-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:116:13-120:29
-224                <action android:name="android.intent.action.BOOT_COMPLETED" />
-224-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-79
-224-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-76
-225                <action android:name="android.intent.action.TIME_SET" />
-225-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:118:17-73
-225-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:118:25-70
-226                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-226-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:119:17-81
-226-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:119:25-78
-227            </intent-filter>
-228        </receiver>
-229        <receiver
-229-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:122:9-131:20
-230            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
-230-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:123:13-99
-231            android:directBootAware="false"
-231-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:124:13-44
-232            android:enabled="@bool/enable_system_alarm_service_default"
-232-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:125:13-72
-233            android:exported="false" >
-233-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:126:13-37
-234            <intent-filter>
-234-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:128:13-130:29
-235                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
-235-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:129:17-98
-235-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:129:25-95
-236            </intent-filter>
-237        </receiver>
-238        <receiver
-238-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:132:9-142:20
-239            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
-239-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:133:13-78
-240            android:directBootAware="false"
-240-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:134:13-44
-241            android:enabled="true"
-241-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:135:13-35
-242            android:exported="true"
-242-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:136:13-36
-243            android:permission="android.permission.DUMP" >
-243-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:137:13-57
-244            <intent-filter>
-244-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:139:13-141:29
-245                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
-245-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:140:17-88
-245-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:140:25-85
-246            </intent-filter>
-247        </receiver>
-248
-249        <service
-249-->[androidx.room:room-runtime:2.5.0] C:\Users\akshi\.gradle\caches\transforms-3\49cf2257297567b8fdc2127c5ed5f286\transformed\room-runtime-2.5.0\AndroidManifest.xml:24:9-28:63
-250            android:name="androidx.room.MultiInstanceInvalidationService"
-250-->[androidx.room:room-runtime:2.5.0] C:\Users\akshi\.gradle\caches\transforms-3\49cf2257297567b8fdc2127c5ed5f286\transformed\room-runtime-2.5.0\AndroidManifest.xml:25:13-74
-251            android:directBootAware="true"
-251-->[androidx.room:room-runtime:2.5.0] C:\Users\akshi\.gradle\caches\transforms-3\49cf2257297567b8fdc2127c5ed5f286\transformed\room-runtime-2.5.0\AndroidManifest.xml:26:13-43
-252            android:exported="false" />
-252-->[androidx.room:room-runtime:2.5.0] C:\Users\akshi\.gradle\caches\transforms-3\49cf2257297567b8fdc2127c5ed5f286\transformed\room-runtime-2.5.0\AndroidManifest.xml:27:13-37
-253
-254        <uses-library
-254-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
-255            android:name="androidx.window.extensions"
-255-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
-256            android:required="false" />
-256-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
-257        <uses-library
-257-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
-258            android:name="androidx.window.sidecar"
-258-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
-259            android:required="false" />
-259-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
-260
-261        <receiver
-261-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-262            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-262-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-263            android:directBootAware="false"
-263-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-264            android:enabled="true"
-264-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-265            android:exported="true"
-265-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-266            android:permission="android.permission.DUMP" >
-266-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-267            <intent-filter>
-267-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-268                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-268-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-268-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-269            </intent-filter>
-270            <intent-filter>
-270-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-271                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-271-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-271-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-272            </intent-filter>
-273            <intent-filter>
-273-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-274                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-274-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-274-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-275            </intent-filter>
-276            <intent-filter>
-276-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-277                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-277-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-277-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-278            </intent-filter>
-279        </receiver>
-280    </application>
-281
-282</manifest>
+43    <uses-permission android:name="com.example.biometrics.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+43-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+43-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+44
+45    <application
+46        android:name="android.app.Application"
+47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+47-->[androidx.core:core:1.13.1] C:\Users\akshi\.gradle\caches\transforms-3\10260aa251fc1dab0cc93733c3fecc32\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+48        android:debuggable="true"
+49        android:enableOnBackInvokedCallback="true"
+50        android:icon="@mipmap/ic_launcher"
+51        android:label="biometrics"
+52        android:requestLegacyExternalStorage="true" >
+53
+54        <!-- MainActivity Declaration -->
+55        <activity
+56            android:name="com.example.biometrics.MainActivity"
+57            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+58            android:exported="true"
+59            android:hardwareAccelerated="true"
+60            android:launchMode="singleTop"
+61            android:theme="@style/LaunchTheme"
+62            android:windowSoftInputMode="adjustResize" >
+63            <meta-data
+64                android:name="io.flutter.embedding.android.NormalTheme"
+65                android:resource="@style/NormalTheme" />
+66
+67            <intent-filter>
+68                <action android:name="android.intent.action.MAIN" />
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+71            </intent-filter>
+72        </activity>
+73
+74        <!-- Flutter Embedding Version -->
+75        <meta-data
+76            android:name="flutterEmbedding"
+77            android:value="2" />
+78
+79        <!-- Background Service Declaration -->
+80        <service
+81            android:name="com.example.biometrics.MyBackgroundService"
+82            android:enabled="true"
+83            android:exported="false"
+84            android:foregroundServiceType="dataSync" /> <!-- Specify the foreground service type here -->
+85
+86        <service
+87            android:name="com.example.biometrics.GestureService"
+88            android:exported="true"
+89            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+90            <intent-filter>
+91                <action android:name="android.accessibilityservice.AccessibilityService" />
+92            </intent-filter>
+93
+94            <meta-data
+95                android:name="android.accessibilityservice"
+96                android:resource="@xml/accessibility_service_config" />
+97        </service>
+98        <service
+98-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:44
+99            android:name="id.flutter.flutter_background_service.BackgroundService"
+99-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-83
+100            android:enabled="true"
+100-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-35
+101            android:exported="true"
+101-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-36
+102            android:stopWithTask="false" />
+102-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-41
+103
+104        <receiver
+104-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-21:39
+105            android:name="id.flutter.flutter_background_service.WatchdogReceiver"
+105-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-82
+106            android:enabled="true"
+106-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-35
+107            android:exported="true" />
+107-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-36
+108        <receiver
+108-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-31:20
+109            android:name="id.flutter.flutter_background_service.BootReceiver"
+109-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-78
+110            android:enabled="true"
+110-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-35
+111            android:exported="true" >
+111-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-36
+112            <intent-filter>
+112-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-30:29
+113                <action android:name="android.intent.action.BOOT_COMPLETED" />
+113-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-79
+113-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-76
+114                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+114-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-82
+114-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:28:25-79
+115                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+115-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-84
+115-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:29:25-81
+116            </intent-filter>
+117        </receiver>
+118
+119        <provider
+119-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-16:20
+120            android:name="com.sidlatau.flutteremailsender.FlutterEmailSenderFileProvider"
+120-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-90
+121            android:authorities="com.example.biometrics.file_provider"
+121-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-65
+122            android:exported="false"
+122-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-37
+123            android:grantUriPermissions="true" >
+123-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-47
+124            <meta-data
+124-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-15:61
+125                android:name="android.support.FILE_PROVIDER_PATHS"
+125-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:14:17-67
+126                android:resource="@xml/shared_file_paths" />
+126-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:15:17-58
+127        </provider>
+128        <!--
+129           Declares a provider which allows us to store files to share in
+130           '.../caches/share_plus' and grant the receiving action access
+131        -->
+132        <provider
+132-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:13:9-21:20
+133            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
+133-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-77
+134            android:authorities="com.example.biometrics.flutter.share_provider"
+134-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-74
+135            android:exported="false"
+135-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
+136            android:grantUriPermissions="true" >
+136-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-47
+137            <meta-data
+137-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-15:61
+138                android:name="android.support.FILE_PROVIDER_PATHS"
+138-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:14:17-67
+139                android:resource="@xml/flutter_share_file_paths" />
+139-->[:flutter_email_sender] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:15:17-58
+140        </provider>
+141        <!--
+142           This manifest declared broadcast receiver allows us to use an explicit
+143           Intent when creating a PendingItent to be informed of the user's choice
+144        -->
+145        <receiver
+145-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:26:9-32:20
+146            android:name="dev.fluttercommunity.plus.share.SharePlusPendingIntent"
+146-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-82
+147            android:exported="false" >
+147-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-37
+148            <intent-filter>
+148-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-31:29
+149                <action android:name="EXTRA_CHOSEN_COMPONENT" />
+149-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:30:17-65
+149-->[:share_plus] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\share_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:30:25-62
+150            </intent-filter>
+151        </receiver>
+152
+153        <provider
+153-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:29:9-37:20
+154            android:name="androidx.startup.InitializationProvider"
+154-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:30:13-67
+155            android:authorities="com.example.biometrics.androidx-startup"
+155-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:31:13-68
+156            android:exported="false" >
+156-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:32:13-37
+157            <meta-data
+157-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:34:13-36:52
+158                android:name="androidx.work.WorkManagerInitializer"
+158-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:35:17-68
+159                android:value="androidx.startup" />
+159-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:36:17-49
+160            <meta-data
+160-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\6a9085f24c33e52c377a5cacb1db2e0e\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+161                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+161-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\6a9085f24c33e52c377a5cacb1db2e0e\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+162                android:value="androidx.startup" />
+162-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\6a9085f24c33e52c377a5cacb1db2e0e\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+163            <meta-data
+163-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\akshi\.gradle\caches\transforms-3\f477ad10a2923f78552261c5d440f766\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+164                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+164-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\akshi\.gradle\caches\transforms-3\f477ad10a2923f78552261c5d440f766\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+165                android:value="androidx.startup" />
+165-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\akshi\.gradle\caches\transforms-3\f477ad10a2923f78552261c5d440f766\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+166            <meta-data
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+167                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+168                android:value="androidx.startup" />
+168-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+169        </provider>
+170
+171        <service
+171-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:39:9-45:35
+172            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+172-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:40:13-88
+173            android:directBootAware="false"
+173-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:41:13-44
+174            android:enabled="@bool/enable_system_alarm_service_default"
+174-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:42:13-72
+175            android:exported="false" />
+175-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:43:13-37
+176        <service
+176-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:46:9-52:35
+177            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+177-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:47:13-84
+178            android:directBootAware="false"
+178-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:48:13-44
+179            android:enabled="@bool/enable_system_job_service_default"
+179-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:49:13-70
+180            android:exported="true"
+180-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:50:13-36
+181            android:permission="android.permission.BIND_JOB_SERVICE" />
+181-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:51:13-69
+182        <service
+182-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:53:9-59:35
+183            android:name="androidx.work.impl.foreground.SystemForegroundService"
+183-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:54:13-81
+184            android:directBootAware="false"
+184-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:55:13-44
+185            android:enabled="@bool/enable_system_foreground_service_default"
+185-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:56:13-77
+186            android:exported="false" />
+186-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:57:13-37
+187
+188        <receiver
+188-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:61:9-66:35
+189            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+189-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:62:13-88
+190            android:directBootAware="false"
+190-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:63:13-44
+191            android:enabled="true"
+191-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:64:13-35
+192            android:exported="false" />
+192-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:65:13-37
+193        <receiver
+193-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:67:9-77:20
+194            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+194-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:68:13-106
+195            android:directBootAware="false"
+195-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:69:13-44
+196            android:enabled="false"
+196-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:70:13-36
+197            android:exported="false" >
+197-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:71:13-37
+198            <intent-filter>
+198-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:73:13-76:29
+199                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+199-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:74:17-87
+199-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:74:25-84
+200                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+200-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:75:17-90
+200-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:75:25-87
+201            </intent-filter>
+202        </receiver>
+203        <receiver
+203-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:78:9-88:20
+204            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+204-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:79:13-104
+205            android:directBootAware="false"
+205-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:80:13-44
+206            android:enabled="false"
+206-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:81:13-36
+207            android:exported="false" >
+207-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:82:13-37
+208            <intent-filter>
+208-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:84:13-87:29
+209                <action android:name="android.intent.action.BATTERY_OKAY" />
+209-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:85:17-77
+209-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:85:25-74
+210                <action android:name="android.intent.action.BATTERY_LOW" />
+210-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:86:17-76
+210-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:86:25-73
+211            </intent-filter>
+212        </receiver>
+213        <receiver
+213-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:89:9-99:20
+214            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+214-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:90:13-104
+215            android:directBootAware="false"
+215-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:91:13-44
+216            android:enabled="false"
+216-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:92:13-36
+217            android:exported="false" >
+217-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:93:13-37
+218            <intent-filter>
+218-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:95:13-98:29
+219                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+219-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:96:17-83
+219-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:96:25-80
+220                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+220-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:97:17-82
+220-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:97:25-79
+221            </intent-filter>
+222        </receiver>
+223        <receiver
+223-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:100:9-109:20
+224            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+224-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:101:13-103
+225            android:directBootAware="false"
+225-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:102:13-44
+226            android:enabled="false"
+226-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:103:13-36
+227            android:exported="false" >
+227-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:104:13-37
+228            <intent-filter>
+228-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:106:13-108:29
+229                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+229-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:107:17-79
+229-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:107:25-76
+230            </intent-filter>
+231        </receiver>
+232        <receiver
+232-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:110:9-121:20
+233            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+233-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:111:13-88
+234            android:directBootAware="false"
+234-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:112:13-44
+235            android:enabled="false"
+235-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:113:13-36
+236            android:exported="false" >
+236-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:114:13-37
+237            <intent-filter>
+237-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:116:13-120:29
+238                <action android:name="android.intent.action.BOOT_COMPLETED" />
+238-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-79
+238-->[:flutter_background_service_android] D:\Source Codes\Projects\Ongoing\Data-Collection-for-Behavioral-Biometrics\build\flutter_background_service_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-76
+239                <action android:name="android.intent.action.TIME_SET" />
+239-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:118:17-73
+239-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:118:25-70
+240                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+240-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:119:17-81
+240-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:119:25-78
+241            </intent-filter>
+242        </receiver>
+243        <receiver
+243-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:122:9-131:20
+244            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+244-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:123:13-99
+245            android:directBootAware="false"
+245-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:124:13-44
+246            android:enabled="@bool/enable_system_alarm_service_default"
+246-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:125:13-72
+247            android:exported="false" >
+247-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:126:13-37
+248            <intent-filter>
+248-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:128:13-130:29
+249                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+249-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:129:17-98
+249-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:129:25-95
+250            </intent-filter>
+251        </receiver>
+252        <receiver
+252-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:132:9-142:20
+253            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+253-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:133:13-78
+254            android:directBootAware="false"
+254-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:134:13-44
+255            android:enabled="true"
+255-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:135:13-35
+256            android:exported="true"
+256-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:136:13-36
+257            android:permission="android.permission.DUMP" >
+257-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:137:13-57
+258            <intent-filter>
+258-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:139:13-141:29
+259                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+259-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:140:17-88
+259-->[androidx.work:work-runtime:2.8.1] C:\Users\akshi\.gradle\caches\transforms-3\1ded61f907108a93e8a292eaf44ab4fc\transformed\work-runtime-2.8.1\AndroidManifest.xml:140:25-85
+260            </intent-filter>
+261        </receiver>
+262
+263        <service
+263-->[androidx.room:room-runtime:2.5.0] C:\Users\akshi\.gradle\caches\transforms-3\49cf2257297567b8fdc2127c5ed5f286\transformed\room-runtime-2.5.0\AndroidManifest.xml:24:9-28:63
+264            android:name="androidx.room.MultiInstanceInvalidationService"
+264-->[androidx.room:room-runtime:2.5.0] C:\Users\akshi\.gradle\caches\transforms-3\49cf2257297567b8fdc2127c5ed5f286\transformed\room-runtime-2.5.0\AndroidManifest.xml:25:13-74
+265            android:directBootAware="true"
+265-->[androidx.room:room-runtime:2.5.0] C:\Users\akshi\.gradle\caches\transforms-3\49cf2257297567b8fdc2127c5ed5f286\transformed\room-runtime-2.5.0\AndroidManifest.xml:26:13-43
+266            android:exported="false" />
+266-->[androidx.room:room-runtime:2.5.0] C:\Users\akshi\.gradle\caches\transforms-3\49cf2257297567b8fdc2127c5ed5f286\transformed\room-runtime-2.5.0\AndroidManifest.xml:27:13-37
+267
+268        <uses-library
+268-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+269            android:name="androidx.window.extensions"
+269-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+270            android:required="false" />
+270-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+271        <uses-library
+271-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+272            android:name="androidx.window.sidecar"
+272-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+273            android:required="false" />
+273-->[androidx.window:window:1.2.0] C:\Users\akshi\.gradle\caches\transforms-3\d1af226ab9ee4793c757bccd44161abb\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+274
+275        <receiver
+275-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+276            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+276-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+277            android:directBootAware="false"
+277-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+278            android:enabled="true"
+278-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+279            android:exported="true"
+279-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+280            android:permission="android.permission.DUMP" >
+280-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+281            <intent-filter>
+281-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+282                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+282-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+282-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+283            </intent-filter>
+284            <intent-filter>
+284-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+285                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+285-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+285-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+286            </intent-filter>
+287            <intent-filter>
+287-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+288                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+288-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+288-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+289            </intent-filter>
+290            <intent-filter>
+290-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+291                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+291-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+291-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\akshi\.gradle\caches\transforms-3\f597356902c18a9834e3536a15bf1141\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+292            </intent-filter>
+293        </receiver>
+294    </application>
+295
+296</manifest>

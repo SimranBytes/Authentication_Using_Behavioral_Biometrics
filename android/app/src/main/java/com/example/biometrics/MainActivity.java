@@ -1,40 +1,37 @@
-package com.example.biometrics;  // Ensure this matches your app's package name
+package com.example.biometrics;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity;
-import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 
 public class MainActivity extends FlutterActivity {
-    // This must match the channel name in your Flutter app
-    private static final String CHANNEL = "com.example.biometrics/background";
+
+    private static final String CHANNEL = "com.example.biometrics/gestures";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Registering the MethodChannel to communicate between Flutter and native Android
+        // Initialize the MethodChannel and assign it to the GestureService
+        GestureService.methodChannel = new MethodChannel(
+                getFlutterEngine().getDartExecutor().getBinaryMessenger(), CHANNEL
+        );
+
         new MethodChannel(getFlutterEngine().getDartExecutor().getBinaryMessenger(), CHANNEL)
-                .setMethodCallHandler(new MethodChannel.MethodCallHandler() {
-                    @Override
-                    public void onMethodCall(MethodCall call, MethodChannel.Result result) {
-                        // Handle the method call
-                        if (call.method.equals("startService")) {
-                            // Call method to start the background service
-                            startBackgroundService();
-                            result.success("Service Started");
-                        } else {
-                            result.notImplemented();
-                        }
+                .setMethodCallHandler((call, result) -> {
+                    if (call.method.equals("startService")) {
+                        startGestureService();
+                        result.success("Gesture Service Started");
+                    } else {
+                        result.notImplemented();
                     }
                 });
     }
 
-    // Method to start the background service
-    private void startBackgroundService() {
-        Intent intent = new Intent(this, MyBackgroundService.class);
-        startService(intent);  // Start the background service
+    // Start the GestureService
+    private void startGestureService() {
+        Intent intent = new Intent(this, GestureService.class);
+        startService(intent);  // Start the Accessibility Service
     }
 }
