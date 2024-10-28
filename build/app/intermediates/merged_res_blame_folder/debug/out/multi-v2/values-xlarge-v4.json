@@ -4,7 +4,7 @@
             "outputFile": "com.example.biometrics.app-mergeDebugResources-35:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\akshi\\.gradle\\caches\\transforms-3\\853727013b9b6549d00f29b3fefaeb27\\transformed\\appcompat-1.6.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\gugnu\\.gradle\\caches\\transforms-3\\853727013b9b6549d00f29b3fefaeb27\\transformed\\appcompat-1.6.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

@@ -15,14 +15,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- Permissions -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- Add the required permission for dataSync foreground service type -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" /> <!-- Queries (used for intent resolution) -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Queries (used for intent resolution) -->
     <queries>
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT" />
@@ -31,7 +24,9 @@
         </intent>
     </queries>
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -76,25 +71,6 @@
             android:name="flutterEmbedding"
             android:value="2" />
 
-        <!-- Background Service Declaration -->
-        <service
-            android:name="com.example.biometrics.MyBackgroundService"
-            android:enabled="true"
-            android:exported="false"
-            android:foregroundServiceType="dataSync" /> <!-- Specify the foreground service type here -->
-
-        <service
-            android:name="com.example.biometrics.GestureService"
-            android:exported="true"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
-            <intent-filter>
-                <action android:name="android.accessibilityservice.AccessibilityService" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.accessibilityservice"
-                android:resource="@xml/accessibility_service_config" />
-        </service>
         <service
             android:name="id.flutter.flutter_background_service.BackgroundService"
             android:enabled="true"

@@ -4,7 +4,7 @@
             "outputFile": "com.example.biometrics.app-mergeDebugResources-35:/values-ca/values-ca.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\akshi\\.gradle\\caches\\transforms-3\\10260aa251fc1dab0cc93733c3fecc32\\transformed\\core-1.13.1\\res\\values-ca\\values-ca.xml",
+                    "source": "C:\\Users\\gugnu\\.gradle\\caches\\transforms-3\\10260aa251fc1dab0cc93733c3fecc32\\transformed\\core-1.13.1\\res\\values-ca\\values-ca.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\akshi\\.gradle\\caches\\transforms-3\\853727013b9b6549d00f29b3fefaeb27\\transformed\\appcompat-1.6.1\\res\\values-ca\\values-ca.xml",
+                    "source": "C:\\Users\\gugnu\\.gradle\\caches\\transforms-3\\853727013b9b6549d00f29b3fefaeb27\\transformed\\appcompat-1.6.1\\res\\values-ca\\values-ca.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

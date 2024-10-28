@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; // Add this import for MethodChannel
-import 'sensor_manager.dart';
+import 'sensor_manager.dart'; // Ensure this is imported correctly
+import 'game_screen.dart'; // Import the GamesScreen
+
 
 class CsvDataScreen extends StatefulWidget {
   @override
@@ -30,7 +31,8 @@ class _CsvDataScreenState extends State<CsvDataScreen> {
                 List<dynamic> row = snapshot.data![index];
                 return ListTile(
                   title: Text('Timestamp: ${row[0]}'),
-                  subtitle: Text('Accelerometer: (${row[1]}, ${row[2]}, ${row[3]}) Touch: (${row[4]}, ${row[5]})'),
+                  subtitle: Text(
+                      'Accelerometer: (${row[1]}, ${row[2]}, ${row[3]}) Touch: (${row[4]}, ${row[5]})'),
                 );
               },
             );
@@ -52,24 +54,13 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _isCollectingData = false;
   SensorManager sensorManager = SensorManager();
 
-  // Define the MethodChannel to communicate with Android
-  static const MethodChannel platform = MethodChannel('com.example.biometrics/background');
-
   @override
   void dispose() {
     sensorManager.dispose();
     super.dispose();
   }
 
-  // Method to start the background service
-  Future<void> _startForegroundService() async {
-    try {
-      await platform.invokeMethod('startService');  // Trigger the Android service
-    } on PlatformException catch (e) {
-      print("Failed to start service: '${e.message}'.");
-    }
-  }
-
+  // Toggle data collection (No more service call here)
   void _toggleDataCollection() async {
     setState(() {
       _isCollectingData = !_isCollectingData;
@@ -78,9 +69,16 @@ class _MyHomePageState extends State<MyHomePage> {
     if (_isCollectingData) {
       try {
         await sensorManager.startCollection(context);
-        await _startForegroundService();  // Start the foreground service when data collection starts
         ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("Data collection started successfully.")));
+          SnackBar(content: Text("Data collection started successfully.")),
+        );
+
+        // Navigate to GamesScreen with SensorManager instance
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => PianoTilesGame(sensorManager: sensorManager),
+          ),
+        );
       } catch (e) {
         setState(() {
           _isCollectingData = false;
@@ -90,9 +88,12 @@ class _MyHomePageState extends State<MyHomePage> {
     } else {
       sensorManager.stopCollection();
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Data collection stopped.")));
+        SnackBar(content: Text("Data collection stopped.")),
+      );
     }
   }
+
+
 
   void _showErrorDialog(String message) {
     showDialog(
@@ -112,10 +113,10 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  // Method to handle sharing the CSV file
+  // Handle sharing the CSV file
   Future<void> _shareCsvFile() async {
     try {
-      await sensorManager.shareDataFile(context);  // Share the CSV file
+      await sensorManager.shareDataFile(context); // Share the CSV file
     } catch (e) {
       _showErrorDialog("Failed to share the CSV file: ${e.toString()}");
     }
@@ -128,7 +129,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Sensor Data Collection'),
       ),
       body: GestureDetector(
-        onPanUpdate: (details) => sensorManager.updateTouchData(details.localPosition),
+        onPanUpdate: (details) =>
+            sensorManager.updateTouchData(details.localPosition),
         behavior: HitTestBehavior.opaque,
         child: Center(
           child: Column(
@@ -136,7 +138,9 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               ElevatedButton(
                 onPressed: _toggleDataCollection,
-                child: Text(_isCollectingData ? 'Stop Data Collection' : 'Start Data Collection'),
+                child: Text(_isCollectingData
+                    ? 'Stop Data Collection'
+                    : 'Start Data Collection'),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
                     _isCollectingData ? Colors.red : Colors.green,
@@ -154,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: _shareCsvFile,  // Call the share function when button is pressed
+                onPressed: _shareCsvFile, // Call the share function
                 child: Text('Share CSV Data'),
               ),
             ],

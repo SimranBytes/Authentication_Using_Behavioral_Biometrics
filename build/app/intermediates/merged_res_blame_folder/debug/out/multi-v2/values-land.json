@@ -4,7 +4,7 @@
             "outputFile": "com.example.biometrics.app-mergeDebugResources-35:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\akshi\\.gradle\\caches\\transforms-3\\853727013b9b6549d00f29b3fefaeb27\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\gugnu\\.gradle\\caches\\transforms-3\\853727013b9b6549d00f29b3fefaeb27\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

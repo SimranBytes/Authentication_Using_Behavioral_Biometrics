@@ -6,8 +6,6 @@ import 'package:path_provider/path_provider.dart';
 import 'package:csv/csv.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:cross_file/cross_file.dart';
-import 'package:workmanager/workmanager.dart';
-import 'permissions.dart';
 
 class SensorManager {
   List<StreamSubscription<dynamic>> _streamSubscriptions = [];
@@ -18,10 +16,6 @@ class SensorManager {
   double? _accelerometerX, _accelerometerY, _accelerometerZ;
   double? _gyroscopeX, _gyroscopeY, _gyroscopeZ;
   double? _magnetometerX, _magnetometerY, _magnetometerZ;
-  double? _rotationVectorX, _rotationVectorY, _rotationVectorZ;
-  double? _tiltX, _tiltY, _tiltZ;
-  double? _autoRotationX, _autoRotationY, _autoRotationZ;
-  double? _motionX, _motionY, _motionZ;
 
   // Variables for storing touch data
   double? _lastTouchX, _lastTouchY;
@@ -30,14 +24,8 @@ class SensorManager {
   Stream<List<dynamic>> get dataStream => _dataController.stream;
 
   Future<void> startCollection(BuildContext context) async {
-    if (true) {
-      _collectSensorData();
-      _startBackgroundTask(); // Start background collection task
-      print('Data collection started.');
-    } else {
-      print("Storage permission not granted");
-      throw Exception("Storage permission not granted");
-    }
+    _collectSensorData();
+    print('Data collection started.');
   }
 
   void dispose() {
@@ -141,22 +129,12 @@ class SensorManager {
         await Share.shareXFiles([xFile], text: 'Here is the sensor data collected.');
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("File does not exist, cannot share."))
-        );
+            SnackBar(content: Text("File does not exist, cannot share.")));
       }
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("External storage directory is not available, cannot share."))
-      );
+          SnackBar(content: Text("External storage directory is not available, cannot share.")));
     }
-  }
-
-  Future<void> _startBackgroundTask() async {
-    Workmanager().registerPeriodicTask(
-      "sensorDataCollection",
-      "backgroundSensorTask",
-      frequency: const Duration(minutes: 15),
-    );
   }
 
   Future<List<List<dynamic>>> readCsvData() async {
