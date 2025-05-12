@@ -16,7 +16,6 @@ A seamless, non-intrusive second-factor authentication system for mobile devices
 7. [Video Demonstration](#video-demonstration)  
 8. [Dataset](#dataset)  
 9. [Contributors](#contributors)  
-10. [License](#license)  
 
 ---
 
@@ -150,15 +149,12 @@ We collected a dataset (5.5 million+ rows from 25 participants) is too large for
 
 ---
 
-## Contributors
+## Contributors (G36)
 
-- Akshit Sharma (Roll No. 211435)  
-- Simran (Roll No. 211442)  
+- Akshit Sharma (211435)  
+- Simran (211442)  
 
 **Supervisor**: Dr. Kushal Kanwar, Assistant Professor (SG), CSE & IT, JUIT
 
 ---
 
-## License
-
-This project is intended for academic and research purposes only. Contact the authors for any commercial or derivative use.
