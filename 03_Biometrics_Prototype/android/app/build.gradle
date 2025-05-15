@@ -20,10 +20,7 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.g36.biometrics_prototype"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
@@ -32,8 +29,7 @@ android {
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+            // Signing with the debug keys for now.
             signingConfig = signingConfigs.debug
         }
     }
@@ -42,3 +38,18 @@ android {
 flutter {
     source = "../.."
 }
+
+dependencies {
+    // Flutter-generated dependencies
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Firebase BoM – manages Firebase library versions
+    implementation platform('com.google.firebase:firebase-bom:32.1.1')
+    // Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth'
+
+    // (Other dependencies your app may need...)
+}
+
+// At the very bottom, apply the Google Services plugin
+apply plugin: 'com.google.gms.google-services'

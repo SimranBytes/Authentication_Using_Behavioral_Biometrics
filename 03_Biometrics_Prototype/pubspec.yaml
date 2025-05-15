@@ -30,6 +30,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # Firebase & ML
+  firebase_core: ^2.13.0
+  firebase_auth: ^4.7.3
+  tflite_flutter: ^0.10.0
+
+  # UI helper
+  percent_indicator: ^4.2.2
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -57,6 +65,9 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/models/gru_model.tflite
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
