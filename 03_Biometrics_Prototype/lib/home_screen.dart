@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _status = AuthStatus.checking;
     });
     // Get the most recent 100×21 window
-    final window = SensorManager.instance.getBufferedWindow();
+    final window = SensorManager().getBufferedWindow();
     final conf = ModelService.predictConfidence(window);
     setState(() => _confidence = conf);
 
@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
     } else {
       // Mismatch: retry up to maxMismatchRetries
       for (int i = 0; i < AppConstants.maxMismatchRetries; i++) {
-        final retryWindow = SensorManager.instance.getBufferedWindow();
+        final retryWindow = SensorManager().getBufferedWindow();
         final retryConf = ModelService.predictConfidence(retryWindow);
         if (retryConf >= AppConstants.confidenceThreshold) {
           setState(() {

@@ -18,8 +18,8 @@ class _TrainingScreenState extends State<TrainingScreen> {
     super.initState();
     _remaining = AppConstants.initialTrainingDuration;
     // Start collecting sensor data
-    SensorManager().startCollection(context);
-    // Timer to update countdown
+    SensorManager().startCollection();
+    // Timer to update countdown each second
     _timer = Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
         if (_remaining.inSeconds > 0) {
@@ -62,15 +62,17 @@ class _TrainingScreenState extends State<TrainingScreen> {
             children: [
               Text(
                 'Training in progress',
-                style: Theme.of(context).textTheme.headline6,
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 24),
               CircularPercentIndicator(
                 radius: 120,
                 lineWidth: 13,
                 percent: percent.clamp(0.0, 1.0),
-                center: Text(_formatDuration(_remaining),
-                    style: TextStyle(fontSize: 24)),
+                center: Text(
+                  _formatDuration(_remaining),
+                  style: TextStyle(fontSize: 24),
+                ),
                 progressColor: Theme.of(context).primaryColor,
               ),
               SizedBox(height: 24),
