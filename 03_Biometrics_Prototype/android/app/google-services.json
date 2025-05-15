@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1039940089216",
+    "project_id": "behavioural-biometrics",
+    "storage_bucket": "behavioural-biometrics.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039940089216:android:25f033e85d3a05d14c3d65",
+        "android_client_info": {
+          "package_name": "com.g36.biometrics_prototype"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAej1iFYhiZxTchyBTNNBrXibLENXC8hvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
