@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'auth_service.dart';
-import 'constants.dart';
 
+/// A login page stub that bypasses authentication and navigates directly to training.
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
   bool _obscurePassword = true;
-  bool _isLoading = false;
 
   @override
   void dispose() {
@@ -21,49 +20,16 @@ class _LoginPageState extends State<LoginPage> {
     super.dispose();
   }
 
-  Future<void> _handleLogin() async {
+  void _handleLogin() {
     if (!_formKey.currentState!.validate()) return;
-    setState(() => _isLoading = true);
-    try {
-      // Uncomment for test auto-login override
-      // if (AppConstants.enableTestAutoLogin) {
-      //   await AuthService.signIn(email: AppConstants.testEmail, password: AppConstants.testPassword);
-      // } else {
-      await AuthService.signIn(
-        email: _emailController.text.trim(),
-        password: _passwordController.text.trim(),
-      );
-      // }
-      Navigator.pushReplacementNamed(context, '/home');
-    } catch (_) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(AppConstants.loginErrorMsg)),
-      );
-    } finally {
-      if (mounted) setState(() => _isLoading = false);
-    }
-  }
-
-  void _showServiceUnavailable() {
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        title: Text('Oops!'),
-        content: Text(AppConstants.serviceUnavailableMsg),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text('OK'),
-          ),
-        ],
-      ),
-    );
+    // Bypass any auth logic and go straight to training
+    Navigator.pushReplacementNamed(context, '/training');
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Login')),
+      appBar: AppBar(title: const Text('Login')),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -75,42 +41,31 @@ class _LoginPageState extends State<LoginPage> {
                 TextFormField(
                   controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(labelText: 'Email'),
-                  validator: (v) => v != null && v.contains('@') ? null : 'Enter valid email',
+                  decoration: const InputDecoration(labelText: 'Email'),
+                  validator: (v) => (v != null && v.contains('@')) ? null : 'Enter valid email',
                 ),
-                SizedBox(height: 12),
+                const SizedBox(height: 12),
                 TextFormField(
                   controller: _passwordController,
                   obscureText: _obscurePassword,
                   decoration: InputDecoration(
                     labelText: 'Password',
                     suffixIcon: IconButton(
-                      icon: Icon(
-                        _obscurePassword ? Icons.visibility : Icons.visibility_off,
-                      ),
+                      icon: Icon(_obscurePassword ? Icons.visibility : Icons.visibility_off),
                       onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
                     ),
                   ),
-                  validator: (v) => v != null && v.length >= 6 ? null : 'Min 6 characters',
+                  validator: (v) => (v != null && v.length >= 6) ? null : 'Min 6 characters',
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: _showServiceUnavailable,
-                    child: Text('Forgot Password?'),
-                  ),
-                ),
-                SizedBox(height: 20),
-                _isLoading
-                    ? CircularProgressIndicator()
-                    : ElevatedButton(
+                const SizedBox(height: 20),
+                ElevatedButton(
                   onPressed: _handleLogin,
-                  child: Text('Login'),
+                  child: const Text('Login'),
                 ),
-                SizedBox(height: 12),
+                const SizedBox(height: 12),
                 TextButton(
-                  onPressed: () => Navigator.pushNamed(context, '/signup'),
-                  child: Text('Don\'t have an account? Sign Up'),
+                  onPressed: () => Navigator.pushReplacementNamed(context, '/signup'),
+                  child: const Text('Don\'t have an account? Sign Up'),
                 ),
               ],
             ),

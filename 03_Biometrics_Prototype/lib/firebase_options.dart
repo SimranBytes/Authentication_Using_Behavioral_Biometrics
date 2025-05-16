@@ -59,4 +59,5 @@ class DefaultFirebaseOptions {
     projectId: 'behavioural-biometrics',
     storageBucket: 'behavioural-biometrics.firebasestorage.app',
   );
+
 }
