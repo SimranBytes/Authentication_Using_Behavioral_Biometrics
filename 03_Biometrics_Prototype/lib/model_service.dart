@@ -46,3 +46,20 @@ class ModelService {
     _interpreter = null;
   }
 }
+// import 'dart:math';
+//
+// /// A stubbed ModelService that returns random confidence values in [0.0, 1.0).
+// class ModelService {
+//   ModelService._();
+//   static final Random _rand = Random();
+//
+//   /// No-op initialization for stubbed service.
+//   static Future<void> initialize() async {
+//     // Stub: skip TFLite initialization
+//   }
+//
+//   /// Returns a random confidence between 0.0 and 1.0 (so some checks will "fail").
+//   static double predictConfidence(List<List<double>> window) {
+//     return _rand.nextDouble();
+//   }
+// }
