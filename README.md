@@ -137,8 +137,8 @@ flutter run
 
 ## Video Demonstration
 
-A concise 5-minute walkthrough of the system—from data capture to real-time authentication—is available here (Temporarily Unavailable):  
-**[5-Minute Demo Video](#)**
+A concise 5-minute walkthrough of the system—from data capture to real-time authentication—is available here:  
+**[5-Minute Demo Video](https://youtu.be/joPARCbaVeA)**
 
 ---
 
